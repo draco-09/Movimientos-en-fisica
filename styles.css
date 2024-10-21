@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+    text-align: center;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+h1, h2 {
+    color: #0097a7;
+}
+
+#slidingContainer {
+    background-color: #b2ebf2;
+    padding: 20px;
+    border-radius: 10px;
+    transition: height 0.5s ease;
+    height: auto;
+    display: none;
+}
+
+.content {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+#output {
+    background-color: #b2ebf2;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.media-container {
+    display: none;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+#animationCanvas {
+    display: inline-block;
+    border: 3px solid #00bcd4;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+#videoContainer {
+    display: inline-block;
+    position: absolute;
+    right: -400px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.info-audiovisual {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+    font-weight: bold;
+}
+
+.formula-container {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: 50px;
+    top: 470px;
+}
+
+.formula-card {
+    background-color: #95d5fc;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 250px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+
+.formula-card:hover .formula {
+    display: block;
+}
+
+.formula {
+    display: none;
+    margin-top: 10px;
+    color: #333;
+}
+
+.formula-title {
+    font-size: 18px;
+    color: #0097a7;
+}
+
+.formula-description {
+    font-size: 14px;
+    color: #333;
+    font-weight: normal;
+}
+
+.nameCard {
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.nameCard:hover {
+    background-color: #00bcd4;
+    color: #ffffff;
+}
+
+#imageContainer {
+    z-index: 1000;
+    pointer-events: none;
+    display: none;
+    position: absolute;
+}
+
+#hoverImage {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+#activityButtonContainer {
+    position: absolute;
+    right: 650px;
+    top: 850px;
+    display: none;
+    background-color: #f0f0f0;
+    padding: 0px;
+    border-radius: 0px;
+}
+
+#activityButton {
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggleButton {
+    margin-top: 20px;
+    background-color: #0097a7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#toggleButton:hover {
+    background-color: #007c91;
+}

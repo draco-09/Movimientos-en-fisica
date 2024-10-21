@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Explora los Movimientos en Física!</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Separar CSS en un archivo externo -->
+</head>
+<body>
+    <h1>¡Explora los Movimientos en Física!</h1>
+    <p>Haz clic en un tipo de movimiento para aprender más.</p>
+
+<button id="backButton" onclick="goBack()" style="position: absolute; top: 20px; left: 20px; background-color: #0097a7; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">
+    Volver
+</button>
+
+    <div class="content">
+        <div class="card" onclick="showInfo('mru')">MRU</div>
+        <div class="card" onclick="showInfo('caida-libre')">Caída Libre</div>
+        <div class="card" onclick="showInfo('mrua')">MRUA</div>
+        <div class="card" onclick="showInfo('mcu')">MCU</div>
+    </div>
+
+    <div id="output"></div>
+
+    <div class="media-container" id="mediaContainer">
+        <canvas id="animationCanvas" width="300" height="300"></canvas>
+        <div id="videoContainer">
+            <video id="videoPlayer" width="300" controls>
+                <source id="videoSource" src="" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+    </div>
+
+    <div class="info-audiovisual" id="infoAudiovisual" onclick="showVideo()">
+        info-Audiovisual
+    </div>
+
+    <button id="toggleButton" class="inicio" onclick="toggleContainer()">Integrantes</button>
+
+    <div id="slidingContainer">
+        <div class="nameCard" onmouseover="showImage('camila.png')" onmouseout="hideImage()">
+            Camila Molina
+        </div>
+        <div class="nameCard" onmouseover="showImage('jhoan.png')" onmouseout="hideImage()">
+            Jhoan Perez
+        </div>
+        <div class="nameCard" onmouseover="showImage('elkin.png')" onmouseout="hideImage()">
+            Elkin Torres
+        </div>
+        <div class="nameCard" onmouseover="showImage('lucio.png')" onmouseout="hideImage()">
+            Lucio Garcia
+        </div>
+    </div>
+	
+<!-- Contenedor para mostrar la imagen -->
+<div id="imageContainer" style="display:none; position:absolute;">
+    <img id="hoverImage" src="" alt="Nombre" style="max-width: 200px; max-height: 200px;"/>
+</div>
+
+
+    <div id="activityButtonContainer" style="position: absolute; right: 650px; top: 850px; display: none; background-color: #f0f0f0; padding: 0px; border-radius: 0px;">
+
+        <button id="activityButton" onclick="goToActivity()" style="background-color: red; color: white; font-size: 20px; padding: 15px 30px; border: none; border-radius: 5px; cursor: pointer;">
+            Ir a la actividad
+        </button>
+    </div>
+
+    <div class="formula-container" id="formulaContainer">
+        <div class="formula-card">
+            <div class="formula-title">Fórmula de Posición</div>
+            <div class="formula-description">Ecuación de la posición en función del tiempo.</div>
+            <div class="formula" id="formula1"></div>
+        </div>
+        <div class="formula-card">
+            <div class="formula-title">Fórmula de Velocidad</div>
+            <div class="formula-description">Ecuación de la velocidad en función del tiempo.</div>
+            <div class="formula" id="formula2"></div>
+        </div>
+        <div class="formula-card">
+            <div class="formula-title">Fórmula de Aceleración</div>
+            <div class="formula-description">Ecuación de la aceleración o su ausencia.</div>
+            <div class="formula" id="formula3"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
